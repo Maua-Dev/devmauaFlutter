@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1069729401546",
+    "project_id": "devmaua",
+    "storage_bucket": "devmaua.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1069729401546:android:c2b43b183fb0b0fe3a0233",
+        "android_client_info": {
+          "package_name": "com.devcommmunity.devmaua"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1069729401546-4d87lrd59rc4mcoopm1vsibnoospa404.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOMoxRigFzUFZGJ-8D5rEribGZIshM98A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1069729401546-4d87lrd59rc4mcoopm1vsibnoospa404.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
