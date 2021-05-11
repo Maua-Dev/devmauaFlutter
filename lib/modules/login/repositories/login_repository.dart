@@ -4,10 +4,13 @@ import 'package:firebase_auth/firebase_auth.dart';
 import '../interfaces/login_repository_interface.dart';
 
 class LoginRepository implements ILoginRepository {
-  final FirebaseAuth _auth = FirebaseAuth.instance;
+  final FirebaseAuth auth;
+
+  LoginRepository(this.auth);
+
   @override
   UserModel? getUser() {
-    var user = _auth.currentUser;
+    var user = auth.currentUser;
     if (user != null) {
       return UserModel(email: user.email!, displayName: user.displayName!);
     } else {
@@ -19,7 +22,7 @@ class LoginRepository implements ILoginRepository {
   Future<UserModel?> loginWithEmailAndPassword(
       String email, String senha) async {
     var response =
-        await _auth.signInWithEmailAndPassword(email: email, password: senha);
+        await auth.signInWithEmailAndPassword(email: email, password: senha);
     var user = response.user!;
     return UserModel(email: user.email!, displayName: user.displayName!);
   }
