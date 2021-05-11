@@ -11,10 +11,10 @@ abstract class _LoginControllerBase with Store {
   final ILoginRepository loginRepository;
 
   @computed
-  String get getUserEmail => loginRepository.getUser()!.email!;
+  String get getUserEmail => loginRepository.getUser()!.email;
 
   @observable
-  LoginModel _loginModel = new LoginModel();
+  LoginModel _loginModel = LoginModel();
 
   _LoginControllerBase({required this.loginRepository});
 
