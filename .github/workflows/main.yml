@@ -31,8 +31,9 @@ jobs:
       - uses: codecov/codecov-action@v1
         with:
           token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
+          files: ./info.lcov
           flags: unittests # optional
-          directory: coverage/html/
+          directory: coverage/
           functionalities: html
           name: codecov-umbrella # optional
           fail_ci_if_error: true # optional (default = false)
