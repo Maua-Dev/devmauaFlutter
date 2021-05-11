@@ -27,7 +27,6 @@ class LoginRepository implements ILoginRepository {
   @override
   Future<UserModel?> registerWithEmailAndPassword(
       String nome, String email, String senha) {
-    // TODO: implement registerWithEmailAndPassword
     throw UnimplementedError();
   }
 }

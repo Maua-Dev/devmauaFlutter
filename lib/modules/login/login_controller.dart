@@ -1,4 +1,3 @@
-import 'package:flutter_modular/flutter_modular.dart';
 import 'package:mobx/mobx.dart';
 import './models/login_model.dart';
 import './interfaces/login_repository_interface.dart';
@@ -19,12 +18,12 @@ abstract class _LoginControllerBase with Store {
   _LoginControllerBase({required this.loginRepository});
 
   @action
-  setEmail(String value) {
+  void setEmail(String value) {
     _loginModel = _loginModel.copyWith(email: value);
   }
 
   @action
-  setSenha(String value) {
+  void setSenha(String value) {
     _loginModel = _loginModel.copyWith(password: value);
   }
 

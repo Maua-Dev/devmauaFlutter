@@ -11,6 +11,6 @@ class LoginModel {
     );
   }
 
-  bool get invalidEmail => !this.email.contains("@");
-  bool get invalidPassword => this.password.length < 8;
+  bool get invalidEmail => !email.contains('@');
+  bool get invalidPassword => password.length < 8;
 }
