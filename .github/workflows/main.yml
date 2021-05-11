@@ -15,7 +15,6 @@ jobs:
           channel: "stable"
       - run: flutter pub get
       - run: flutter analyze
-      - run: flutter test
       
       # Report:
       - name: Install lcov
@@ -23,22 +22,21 @@ jobs:
       - name: Flutter Test
         run: flutter test --coverage
       - name: Create report
-        run: genhtml coverage/lcov.info -o coverage/html
-      - uses: actions/upload-artifact@v2
-        with:
-          name: report
-          path: coverage/html/
+        run: genhtml coverage/lcov.info -o coverage/html     
       - uses: codecov/codecov-action@v1
         with:
           token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
-          files: ./info.lcov
+          files: coverage/lcov.info
           flags: unittests # optional
           directory: coverage/
           functionalities: html
           name: codecov-umbrella # optional
           fail_ci_if_error: true # optional (default = false)
           verbose: true # optional (default = false)
-      
+      - uses: actions/upload-artifact@v2
+        with:
+          name: report
+          path: coverage/html/
 
   build_Android:
     name: Build Flutter (Android)
