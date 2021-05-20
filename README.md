@@ -1,5 +1,5 @@
 [![codecov](https://codecov.io/gh/Maua-Dev/devmauaFlutter/branch/master/graph/badge.svg?token=7CGATOI22E)](https://codecov.io/gh/Maua-Dev/devmauaFlutter)
-# devmaua
+# DevMaua
 
 A new Flutter project.
 
