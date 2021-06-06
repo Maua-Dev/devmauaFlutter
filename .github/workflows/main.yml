@@ -13,7 +13,7 @@ jobs:
       - uses: subosito/flutter-action@v1
         with:
           channel: "stable"
-      - uses: Klemensas/action-autotag@stable
+      - uses: jacopo1395/action-autotag@2.0.3
         with:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
       - run: flutter pub get
